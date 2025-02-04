@@ -1,0 +1,82 @@
+.toplogo {
+    position: absolute; 
+    top: 1px; 
+    left: 1px;    
+}
+
+.toplogo img {
+    width: 150px; 
+    height: auto; 
+}
+nav {
+    position: absolute;
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    /* align-items: center; */
+    display: flex; 
+    gap: 20px; 
+}
+.top_button {
+    position: absolute;
+    top: 5px; 
+    right: 5px; 
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: white; 
+    color: black;
+    border:1px solid black;
+    cursor: pointer;
+    border-radius: 15px
+}
+.upper_contents {
+    margin-top: 80px; 
+    text-align: center; 
+}
+
+.middlerow {
+    margin-top: 50px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: left; 
+    border: 1px solid black; 
+    padding: 10px;
+}
+
+.middlerow > div {
+    flex: 1; 
+    text-align: center; 
+    padding: 10px;
+    border-right: 1px solid black; 
+}
+
+/* .middlerow > div:first-child {
+    border-left: none; 
+} */
+
+/* .Learn_button{
+    position: absolute; 
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: white; 
+    color: black;
+    border:1px solid black;
+    cursor: pointer;
+    border-radius: 15px
+} */
+
+.bottom_content{
+    margin-top: 50px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: left; 
+    border: 1px solid black; 
+    padding: 10px;
+}
+
+.bottom_content > div {
+    flex: 1; 
+    text-align: center; 
+    padding: 10px;
+    border-right: 1px solid black; 
+}
