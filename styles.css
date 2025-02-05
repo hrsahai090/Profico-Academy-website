@@ -8,15 +8,33 @@
     width: 150px; 
     height: auto; 
 }
+
 nav {
     position: absolute;
     top: 10px; 
     left: 50%; 
     transform: translateX(-50%); 
-    /* align-items: center; */
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
     display: flex; 
     gap: 20px; 
 }
+
+nav ul li {
+    display: inline; 
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
 .top_button {
     position: absolute;
     top: 5px; 
@@ -25,58 +43,104 @@ nav {
     font-size: 16px;
     background-color: white; 
     color: black;
-    border:1px solid black;
+    border: 1px solid black;
     cursor: pointer;
-    border-radius: 15px
+    border-radius: 15px;
 }
+
 .upper_contents {
     margin-top: 80px; 
     text-align: center; 
+}
+
+.upper_contents h1 {
+    font-size: 60px; 
 }
 
 .middlerow {
     margin-top: 50px; 
     display: flex;
     justify-content: space-between; 
-    align-items: left; 
+    align-items: center;
     border: 1px solid black; 
     padding: 10px;
 }
 
 .middlerow > div {
     flex: 1; 
-    text-align: center; 
+    text-align: left;
     padding: 10px;
     border-right: 1px solid black; 
 }
 
-/* .middlerow > div:first-child {
-    border-left: none; 
-} */
+.middlerow > div:last-child {
+    border-right: none; 
+}
 
-/* .Learn_button{
-    position: absolute; 
-    padding: 10px 10px;
+.bottom_content {
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+.learn_button {
+    margin: 30px auto; 
+    display: block; 
+    padding: 9px 15px;
+    font-size: 15x;
+    background-color: #3e4042;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.bottom_content h1 {
+    font-size: 50px; 
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.bottom_content p {
+    font-size: 16px; 
+    max-width: 600px;
+    margin: 10px auto; 
+    line-height: 1.5;
+}
+
+.card-container {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    margin-top: 30px; 
+}
+
+.midd_button { 
+    padding: 10px 15px;
     font-size: 16px;
     background-color: white; 
     color: black;
-    border:1px solid black;
+    border: 1px solid black;
     cursor: pointer;
-    border-radius: 15px
-} */
-
-.bottom_content{
-    margin-top: 50px; 
-    display: flex;
-    justify-content: space-between; 
-    align-items: left; 
-    border: 1px solid black; 
-    padding: 10px;
+    border-radius: 15px;
 }
 
-.bottom_content > div {
+.card {
     flex: 1; 
-    text-align: center; 
-    padding: 10px;
-    border-right: 1px solid black; 
+    border: 1px solid black; 
+    padding: 30px 20px;
+    text-align: left;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px; 
+}
+
+.numbers {
+    margin-top: 80px;
+    text-align: right;
 }
