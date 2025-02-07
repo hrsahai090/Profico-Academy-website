@@ -87,20 +87,20 @@ nav {
     margin-top: 50px; 
 }
 
-.bottom_content h1 {
+.bottom_content span {
     font-size: 50px; 
     font-weight: bold;
     margin-top: 20px;
 }
 
-.bottom_content caption {
+.bottom_content p {
     font-size: 16px; 
     max-width: 600px;
     margin: 10px auto; 
     line-height: 1.5;
 }
 
-.learn_button {
+.learn_button{
     margin: 30px auto; 
     display: block; 
     gap: 8px;
@@ -118,32 +118,39 @@ nav {
     height: 15px;
   }
 
-.card_container {
+  .card_container {
     margin-top: 50px;
-    display: flex; 
-    justify-content: space-between; 
-    gap: 20px; 
-    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.card {
-    flex: 2; 
-    border: 1px solid black; 
-    padding: 15px 15px;
+.card_container li {
+    flex: 2;
+    border: 1px solid black;
     text-align: left;
     border-radius: 5px;
+    padding: 15px 45px;
+    position: relative;  
+    display: flex;
+    flex-direction: column;
+    height: 200px;  
 }
 
-.card h4 {
-    font-size: 20px;
+.card_container h4 {
+    font-size: 25px;
     font-weight: bold;
+    margin-bottom: 10px; 
 }
 
-.card span {
-    font-size: 14px; 
+.card_container span {
+    font-size: 15px;
 }
 
 .number {
-    margin-top: 80px;
-    text-align: right;
+    position: absolute;
+    bottom: 10px; 
+    right: 15px;  
+    font-size: 20px;
+    font-weight: bold;
 }
