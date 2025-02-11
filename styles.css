@@ -1,16 +1,36 @@
-body {
+:root{
+  --white_transparent: rgba(209, 219, 228, 0.861);
+  --topbutton_hover:#d6e0dc31; 
+  --top_button_border_onhover:rgba(255, 255, 255, 0);
+  --midd_apply_border_onhover:1px solid rgba(247, 244, 244, 0.007);
+  --middlerow_background:#0d0d0dd7;
+  --mid_row_h5:rgb(120, 108, 108);
+  --learn_more_button_bg: #292b2c;
+  --learn_more_button_onhover_bg:#5e6361d7;
+  --card_container_bg: rgba(215, 77, 77, 0.1);
+  --card_container_shadow:0 4px 30px rgba(0, 0, 0, 0.1);
+  --card_container_border:1px solid rgba(215, 77, 77, 0.13);
+  --number_color: rgba(230, 219, 219, 0.614);
+}
+
+html, body {
     background-image: url("images/background.png"); 
     background-size: cover;  
     background-position: center; 
     background-repeat: no-repeat;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    scrollbar-width: none;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  gap: 40px;
   position: fixed;
+  gap: 40px;
   top: 30px; 
   left: 50%;
   translate: -50% -50%;
@@ -18,12 +38,12 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: rgba(209, 219, 228, 0.861);
+  color: var(--white_transparent);
   transition-duration: 0.3s;
 }
 
 a:hover, a.active {
-  color: rgb(255, 255, 255);
+  color: white;
 }
 .toplogo {
   position: absolute;
@@ -41,23 +61,25 @@ a:hover, a.active {
   position: absolute;
   top: 15px;
   right: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 15px 25px;
+  font-size: 14px;
+  font-weight: bold;
   background-color: white;
   color: black;
   cursor: pointer;
-  border-radius: 24px;
-  transition-duration: 0.4s;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  transition-duration: background-color 0.4s, color 0.4s, border 0.4s;
 }
 
 .top_button:hover{
-    background-color: #d6e0dc31; 
+    background-color: var(--topbutton_hover);
     color: white;
-    border: 1px solid rgba(247, 244, 244, 0.007);
+    border: 1px solid var(--top_button_border_onhover)
 }
 
 .upper_contents {
-  color: rgba(209, 219, 228, 0.861);
+  color:var(--white_transparent);
   text-align: center;
   display: flex;
   flex-direction: column; 
@@ -67,60 +89,67 @@ a:hover, a.active {
   height: 80vh; 
 }
 
-.Proficologo {
+.Proficoacademylogo {
   width: 700px; 
   height: auto;
-  margin: 20px 0;
+  margin: 20px 20px;
 }
 
-.midd_button {
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: rgba(255, 255, 255, 0);
+.middle_apply_now_button {
+  padding: 15px 25px;
+  font-size: 14px;
+  font-weight: bold;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.785);
   cursor: pointer;
+  margin-top: 20px; 
+  border: 1px solid rgba(255, 255, 255, 0.785);
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 25px;
   transition-duration: 0.5s;
-  margin-top: 20px; 
 }
 
-.midd_button:hover {
-  background-color: #e8efecf2; 
+.middle_apply_now_button:hover {
+  background-color: white; 
   color: black;
-  border: 1px solid rgba(247, 244, 244, 0.007);
+  border: var(--midd_apply_border_onhover)
 }
 
 .middlerow {
-  width: 100%;
+  width: 100vw; 
   list-style: none;
-  background-color: #0d0d0dd7;
+  background-color: var(--middlerow_background);
   display: flex;
-  
-  gap: 50px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 0; 
+  box-sizing: border-box;
+  gap: 0; 
+  border: none; 
+  margin: 0;
 }
 
 .middlerow li {
-  padding: 25px 0px;
-  flex: 2;
+  flex: 1; 
+  text-align: center; 
+  padding: 20px; 
 }
 
 .middlerow h5 {
   font-size: 1em;
-  color: rgb(120, 108, 108);
-  margin-bottom: 20px;
+  color: var(--mid_row_h5);
+  margin-bottom: 10px; 
 }
 
 .middlerow span {
-  font-size: 0.8em;
-  color: rgb(239, 224, 224);
-  margin-bottom: 20px;
+  font-size: 0.9em; 
+  color: white;
+  display: block; 
+  margin-top: 5px; 
 }
 
 .bottom_content {
   text-align: center;
-  margin-top: 13%;
+  margin-top: 14%;
 }
 .bottom_content div{
   font-size: 70px;
@@ -128,32 +157,27 @@ a:hover, a.active {
   margin-top: 3%;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: rgb(230, 219, 219);
-}
-
-.bottom_content span {
-  font-size: 50px;
-  font-weight: bold;
-  margin-top: 20px;
-  color: rgb(230, 219, 219);
+  color: white;
 }
 
 .bottom_content p {
   font-size: 16px;
-  max-width: 600px;
-  margin: 10px auto;
-  line-height: 1.5;
-  margin-top: 3%;
-  color: rgba(209, 219, 228, 0.861);
+  max-width: 500px;
+  margin: auto;
+  line-height: 1.6;
+  margin-top: 2%;
+  font-weight:normal !important;
+  font-family: 'Arial', sans-serif; 
+  color:var(--white_transparent);
 }
 
 .learn_button {
-  margin: 30px auto;
-  display: block;
-  gap: 8px;
-  padding: 10px 12px;
+  margin: auto;
+  gap: 10px;
+  padding: 10px 20px;
   font-size: 17x;
-  background-color: #292b2c;
+  font-weight: bold;
+  background-color:var(--learn_more_button_bg);
   color: white;
   border: none;
   cursor: pointer;
@@ -161,7 +185,7 @@ a:hover, a.active {
   transition-duration: 0.5s;
 }
 .learn_button:hover{
-  background-color: #6e7472d7;
+  background-color: var(--learn_more_button_onhover_bg);
 }
 
 .button_icon {
@@ -170,46 +194,49 @@ a:hover, a.active {
 }
 
 .card_container {
-  margin-top: 9%;
+  margin-top: 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 20px;
+  padding: 0 5%;
 }
 
 .card_container li {
-  flex: 1;
+  flex: 2;
   text-align: left;
   padding: 10px 30px;
   display: flex;
   flex-direction: column;
   height: 350px;
-  background: rgba(255, 255, 255, 0.315);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 10px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background:var(--card_container_bg);
+  border-radius: 20px;
+  box-shadow: var(--card_container_shadow);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+  border: var(--card_container_border)
 }
 
 .card_container h4 {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: rgb(230, 219, 219);
+  color: white;
 }
 
 .card_container span {
   font-size: 15px;
-  color: rgba(209, 219, 228, 0.861);
+  color:var(--white_transparent);
   padding: 8px 0px;
+  font-weight: normal; 
+  font-family: 'Arial', sans-serif;
 }
 
 .number {
   position: absolute;
   bottom: 10px;
   right: 15px;
-  font-size: 40px;
+  font-size: 25px !important;
   font-weight: bold;
   margin-top: 20%;
-  color: rgba(230, 219, 219, 0.614);
+  color:var(--number_color)
 }
