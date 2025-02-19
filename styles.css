@@ -1,66 +1,62 @@
-:root{
+/* variable declaration content*/
+:root {
   --white_transparent: rgba(209, 219, 228, 0.861);
-  --topbutton_hover:#d6e0dc31; 
-  --top_button_border_onhover:rgba(255, 255, 255, 0);
-  --midd_apply_border_onhover:1px solid rgba(247, 244, 244, 0.007);
-  --middlerow_background:#0d0d0dd7;
-  --mid_row_h5:rgb(120, 108, 108);
+  --topbutton_hover: #d6e0dc31;
+  --top_button_border_onhover: rgba(255, 255, 255, 0);
+  --midd_apply_border_onhover: 1px solid rgba(247, 244, 244, 0.007);
+  --middlerow_background: #393535d7;
+  --mid_row_h5: rgb(84, 77, 77);
   --learn_more_button_bg: #292b2c;
-  --learn_more_button_onhover_bg:#5e6361d7;
+  --learn_more_button_onhover_bg: #5e6361d7;
   --card_container_bg: rgba(215, 77, 77, 0.1);
-  --card_container_shadow:0 4px 30px rgba(0, 0, 0, 0.1);
-  --card_container_border:1px solid rgba(215, 77, 77, 0.13);
-  --number_color: rgba(230, 219, 219, 0.614);
+  --card_container_shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --card_container_border: 0.1px solid rgba(143, 122, 122, 0.265);
+  --number_color: rgba(230, 219, 219, 0.811);
 }
 
-html, body {
-    background-image: url("images/background.png"); 
-    background-size: cover;  
-    background-position: center; 
-    background-repeat: no-repeat;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100%;
-    scrollbar-width: none;
+* {
+  margin: 0;
+  scrollbar-width: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-nav {
+/* nav_header content*/
+
+.nav_header {
   display: flex;
-  justify-content: center;
-  position: fixed;
-  gap: 40px;
-  top: 30px; 
-  left: 50%;
-  translate: -50% -50%;
+  align-items: center;
+  justify-content: space-between;
+  background:transparent;
+  position: sticky;
+  top: 15px;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.toplogo{
+  width: 80px;
+  cursor: pointer;
+}
+
+nav{
+  font-size: 16px;
 }
 
 nav a {
   text-decoration: none;
   color: var(--white_transparent);
-  transition-duration: 0.3s;
+  margin: 0 10px;
 }
 
-a:hover, a.active {
+nav a:hover,
+nav a.active {
   color: white;
-}
-.toplogo {
-  position: absolute;
-  width: 80px; 
-  top: 20px; 
-  left: 20px;
-  cursor: pointer; 
+  transition: 0.5s;
 }
 
-.toplogo img {
-  width: 150px;
-  height: auto;
-}
-.top_button {
-  position: absolute;
-  top: 15px;
-  right: 20px;
+.top_button{
   padding: 15px 25px;
   font-size: 14px;
   font-weight: bold;
@@ -69,28 +65,42 @@ a:hover, a.active {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 25px;
-  transition-duration: background-color 0.4s, color 0.4s, border 0.4s;
+  transition: 0.5s ease-in-out;
 }
-
-.top_button:hover{
-    background-color: var(--topbutton_hover);
-    color: white;
-    border: 1px solid var(--top_button_border_onhover)
+.top_button:hover {
+  background-color: var(--topbutton_hover);
+  color: white;
+  border: 1px solid var(--top_button_border_onhover)
 }
+.shrink {
+  width: 540px;
+  padding: 10px 10px 10px 20px;
+  background: rgba(87, 82, 82, 0.555);
+  border-radius: 40px;
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+}  
 
-.upper_contents {
-  color:var(--white_transparent);
+/* upfold content*/
+
+.upfold {
+  color: var(--white_transparent);
   text-align: center;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   text-transform: uppercase;
-  height: 80vh; 
+  height: 90vh;
+  margin-top: -10vh;
+  background-image: url("images/background1.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .Proficoacademylogo {
-  width: 700px; 
+  width: 650px;
   height: auto;
   margin: 20px 20px;
 }
@@ -101,7 +111,7 @@ a:hover, a.active {
   font-weight: bold;
   color: white;
   cursor: pointer;
-  margin-top: 20px; 
+  margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.785);
   background-color: rgba(255, 255, 255, 0);
   border-radius: 25px;
@@ -109,52 +119,69 @@ a:hover, a.active {
 }
 
 .middle_apply_now_button:hover {
-  background-color: white; 
+  background-color: white;
   color: black;
   border: var(--midd_apply_border_onhover)
 }
 
+/* middle content*/
+
 .middlerow {
-  width: 100vw; 
-  list-style: none;
+  list-style: none; 
   background-color: var(--middlerow_background);
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 0; 
+  padding: 20px 0;
   box-sizing: border-box;
-  gap: 0; 
-  border: none; 
-  margin: 0;
+  gap: 0;
+  border: none;
+  margin-top:auto;
+  opacity: 0; 
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .middlerow li {
-  flex: 1; 
-  text-align: center; 
-  padding: 20px; 
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.middlerow.pop {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .middlerow h5 {
   font-size: 1em;
   color: var(--mid_row_h5);
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .middlerow span {
-  font-size: 0.9em; 
+  font-size: 0.9em;
   color: white;
-  display: block; 
-  margin-top: 5px; 
+  display: block;
+  margin-top: 5px;
 }
 
+/* bottom content*/
+
 .bottom_content {
+  padding-bottom: 8%;
   text-align: center;
-  margin-top: 14%;
+  margin-top: auto;
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.bottom_content div{
+
+.bottom_content div {
   font-size: 70px;
   text-align: center;
-  margin-top: 3%;
+  margin-top: 2%;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
@@ -166,37 +193,40 @@ a:hover, a.active {
   margin: auto;
   line-height: 1.6;
   margin-top: 2%;
-  font-weight:normal !important;
-  font-family: 'Arial', sans-serif; 
-  color:var(--white_transparent);
+  font-weight: normal !important;
+  font-family: 'Arial', sans-serif;
+  color: var(--white_transparent);
 }
 
 .learn_button {
-  margin: auto;
+  margin-top: 15%;
   gap: 10px;
   padding: 10px 20px;
   font-size: 17x;
   font-weight: bold;
-  background-color:var(--learn_more_button_bg);
+  background-color: var(--learn_more_button_bg);
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 25px;
   transition-duration: 0.5s;
 }
-.learn_button:hover{
+
+.learn_button:hover {
   background-color: var(--learn_more_button_onhover_bg);
 }
 
 .button_icon {
   width: 15px;
   height: 15px;
+  margin-right: 10px;
 }
+
+/* card content*/
 
 .card_container {
   margin-top: 10%;
   display: flex;
-  justify-content: space-evenly;
   gap: 20px;
   padding: 0 5%;
 }
@@ -208,35 +238,44 @@ a:hover, a.active {
   display: flex;
   flex-direction: column;
   height: 350px;
-  background:var(--card_container_bg);
-  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  background: var(--card_container_bg);
+  border-radius: 25px;
   box-shadow: var(--card_container_shadow);
-  backdrop-filter: blur(5.7px);
-  -webkit-backdrop-filter: blur(5.7px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: var(--card_container_border)
+}
+
+.card_container li.pop {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card_container h4 {
   font-size: 25px;
+  text-align: left;
   font-weight: bold;
   margin-bottom: 10px;
   color: white;
 }
 
 .card_container span {
-  font-size: 15px;
-  color:var(--white_transparent);
+  font-size: 18px;
+  color: var(--white_transparent);
   padding: 8px 0px;
-  font-weight: normal; 
-  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT';
 }
 
 .number {
   position: absolute;
   bottom: 10px;
   right: 15px;
-  font-size: 25px !important;
+  font-size: 30px !important;
   font-weight: bold;
   margin-top: 20%;
-  color:var(--number_color)
+  color: var(--number_color)
 }
